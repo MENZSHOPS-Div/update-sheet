@@ -1,7 +1,7 @@
 {
   "name": "order-update",
   "version": "1.0.0",
-  "type": "module",              // <<== ต้องมีบรรทัดนี้
+  "type": "module",             
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
