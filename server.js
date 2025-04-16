@@ -1,15 +1,13 @@
-// server.js
-const express = require("express");
-const fetch = require("node-fetch");
-const cors = require("cors");
+import express from "express";
+import fetch from "node-fetch";
+import cors from "cors";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-import "dotenv/config";
-
-
-
 
 app.post("/update-order", async (req, res) => {
   const { orderNumber } = req.body;
