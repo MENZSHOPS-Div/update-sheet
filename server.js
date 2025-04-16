@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.post("/update-order", async (req, res) => {
-  const { preordernumber } = req.body;
+  const { orderNumber } = req.body;
   const appScriptUrl = process.env.SCRIPT_ID;
 
   try {
