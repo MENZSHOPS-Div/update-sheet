@@ -6,10 +6,14 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 app.use(express.json());
+import "dotenv/config";
+
+
+
 
 app.post("/update-order", async (req, res) => {
   const { orderNumber } = req.body;
-  const appScriptUrl = "https://script.google.com/macros/s/YOUR_DEPLOYED_APPSCRIPT_URL/exec";
+  const appScriptUrl = process.env.SCRIPT_ID;
 
   try {
     const response = await fetch(appScriptUrl, {
